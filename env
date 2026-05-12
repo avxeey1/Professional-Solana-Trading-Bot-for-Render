@@ -1,0 +1,56 @@
+# ══════════════════════════════════════════════════════════════════════════════
+#  SolBot v2.0 — Environment Variables
+#  Copy this file to .env and fill in every required value before running.
+#  NEVER commit this file to GitHub — it is already listed in .gitignore.
+# ══════════════════════════════════════════════════════════════════════════════
+
+
+# ── Telegram ──────────────────────────────────────────────────────────────────
+# Your bot token from @BotFather
+TELEGRAM_BOT_TOKEN=
+
+# Your personal numeric Telegram user ID (get it from @userinfobot)
+TELEGRAM_OWNER_ID=
+
+
+# ── Encryption ────────────────────────────────────────────────────────────────
+# 64-character hex string used to encrypt stored wallet private keys.
+# Generate with: python -c "import secrets; print(secrets.token_hex(32))"
+# WARNING: losing this key means losing access to all stored wallets.
+ENCRYPTION_KEY=
+
+
+# ── Solana RPC ────────────────────────────────────────────────────────────────
+# HTTP endpoint — used for all on-chain reads and transaction sends
+SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
+
+# WebSocket endpoint — used for real-time subscription events
+SOLANA_WS_URL=wss://api.mainnet-beta.solana.com
+
+# ── Helius RPC (recommended — replace the two lines above with these) ─────────
+# Sign up free at https://helius.xyz then paste your key below
+# SOLANA_RPC_URL=https://mainnet.helius-rpc.com/?api-key=YOUR_HELIUS_KEY_HERE
+# SOLANA_WS_URL=wss://mainnet.helius-rpc.com/?api-key=YOUR_HELIUS_KEY_HERE
+
+
+# ── Database ──────────────────────────────────────────────────────────────────
+# Path to the SQLite database file.
+# On Render this must match your disk mount path exactly.
+# Local development: data/bot.db
+# Render production:  /var/data/bot.db
+DATABASE_PATH=/var/data/bot.db
+
+
+# ── Optional APIs ─────────────────────────────────────────────────────────────
+# Helius API key — enables token age checks and richer on-chain metadata.
+# Same key as your RPC above if you are using Helius.
+HELIUS_API_KEY=
+
+# BirdEye API key — enhanced price feeds and token analytics.
+# Sign up free at https://birdeye.so/developer
+BIRDEYE_API_KEY=
+
+
+# ── Jupiter Aggregator ────────────────────────────────────────────────────────
+# Default is the public Jupiter v6 API. Only change if using a private endpoint.
+JUPITER_API_URL=https://quote-api.jup.ag/v6
